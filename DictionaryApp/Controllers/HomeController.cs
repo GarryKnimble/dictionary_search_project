@@ -6,7 +6,9 @@ namespace DictionaryApp.Controllers
 {
     public class HomeController : Controller
     {
+        // Search interface for searching dictionary
         SearchInterface search;
+        // Obtain search interface for search capability
         public HomeController(SearchInterface search)
         {
             this.search = search;
