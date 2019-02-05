@@ -11,15 +11,14 @@ namespace DictionaryApp.Controllers
         // Obtain search interface for search capability
         public HomeController(SearchInterface search)
         {
+            string word_content = System.IO.File.ReadAllText("Datasource/words_alpha.txt");
             this.search = search;
+            this.search.setContent(word_content);
         }
         public IActionResult Index(string word)
         {
-            // Retrieve data source content 'Datasource/words_alpha.txt' and define pattern 
-            // for parsing starting and containing strings. Insert 'word' url param to dictate 
-            // what to search for.
-            string word_content = System.IO.File.ReadAllText("Datasource/words_alpha.txt");
-            this.search.search(word, word_content);
+            // Search with the given search term 'word'
+            this.search.search(word);
             // Check if the search term is a valid search
             if (search.isValid())
             {

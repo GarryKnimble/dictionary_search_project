@@ -8,7 +8,8 @@ namespace DictionaryApp
 {
     public interface SearchInterface
     {
-        Exception search(string searchTerm, string content);
+        void setContent(string content);
+        Exception search(string searchTerm);
         MatchCollection getMainMatches();
         MatchCollection getRelatedMatches();
         bool isValid();
