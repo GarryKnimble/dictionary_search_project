@@ -24,13 +24,6 @@ namespace DictionaryApp
         // obtained from the content
         private MatchCollection mainMatches;
         private MatchCollection relatedMatches;
-        
-        // Search
-        // Parameters:
-        // content (string) - The content to be searched using searchTerm
-        public Search()
-        {
-        }
         // method: search
         // searchTerm (string) - The search term to look for in content
         // Obtains both the main and related matches of type MatchCollection if the
