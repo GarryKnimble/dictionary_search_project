@@ -1,0 +1,25 @@
+﻿/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Put some space around the header image*/
+.header {
+    padding: 20px;
+}
+
+/* Let the search form be expandeable */
+.search-form {
+    display: flex;
+}
+
+/* Search bar will take up most of the space */
+input.search {
+    width: 100%;
+}
+
+.instructions {
+    padding: 10px;
+}

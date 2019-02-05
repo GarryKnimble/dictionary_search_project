@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Search";
+}
+<img class="header" src="~/images/header.svg" />
+<form class="search-form" action="/" method="get">
+    <input class="search" type="text" value="@ViewData["search"]" name="word" /><input type="submit" value="Search" />
+</form>
+@* Check if there was a search done *@
+@if ((bool)ViewData["isSearching"])
+{
+    <h3>@(((MatchCollection)ViewData["mainResults"]).Count) results when searching '@ViewData["search"]'</h3>
+    <ul>
+        @* Display the results that are the main results of the search terms *@
+        @foreach (Match m in (MatchCollection)ViewData["mainResults"])
+        {
+            <li>@m.ToString()</li>
+        }
+    </ul>
+
+    <h3>Other related results when searching '@ViewData["search"]'</h3>
+    <ul>
+        @* Display the results that are related to the search terms*@
+        @foreach (Match m in (MatchCollection)ViewData["relatedResults"])
+        {
+            <li>@m.ToString()</li>
+        }
+    </ul>
+}
+@* If not, display instructions *@
+else
+{
+    <div class="instructions">Enter a search term or search terms to begin a search of the dictionary source file</div>
+}
