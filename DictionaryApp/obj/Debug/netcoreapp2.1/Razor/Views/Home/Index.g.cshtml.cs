@@ -68,7 +68,7 @@ using System.Text.RegularExpressions;
 #line default
 #line hidden
             BeginContext(42, 48, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "d98bf799c5d34b91b0dd5f0709ec4fe6", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "f22b6c96a135408b93528be1e3a11b61", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -87,7 +87,7 @@ using System.Text.RegularExpressions;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(92, 179, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a7cfbdbb86094a368a908b114094a720", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "da353a446e2b4f7badc39b1e35d67960", async() => {
                 BeginContext(142, 39, true);
                 WriteLiteral("\r\n    <input class=\"search\" type=\"text\"");
                 EndContext();

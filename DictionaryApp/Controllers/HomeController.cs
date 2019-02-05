@@ -6,14 +6,18 @@ namespace DictionaryApp.Controllers
 {
     public class HomeController : Controller
     {
+        SearchInterface search;
+        public HomeController(SearchInterface search)
+        {
+            this.search = search;
+        }
         public IActionResult Index(string word)
         {
             // Retrieve data source content 'Datasource/words_alpha.txt' and define pattern 
             // for parsing starting and containing strings. Insert 'word' url param to dictate 
             // what to search for.
             string word_content = System.IO.File.ReadAllText("Datasource/words_alpha.txt");
-            Search search = new Search(word, word_content);
-            search.search();
+            this.search.search(word, word_content);
             // Check if the search term is a valid search
             if (search.isValid())
             {
